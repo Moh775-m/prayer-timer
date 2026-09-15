@@ -12,9 +12,9 @@
 .loading-box { margin-top: 50px!important; }
 .loading-spinner { color: black!important; }
 
-.countdown-container { text-align: center; margin: 20px auto; padding: 16px; background: #eef2f7; border-radius: 20px; max-width: 500px; }
+.countdown-container { text-align: center; margin: 20px auto; padding: 16px; background: #627183; border-radius: 20px; max-width: 500px; }
 .countdown-label { font-size: 16px; color: #666; margin: 0 0 6px 0; }
-.countdown-time { font-size: 42px; font-weight: 800; margin: 0; letter-spacing: 2px; direction: ltr; }
+.countdown-time { font-size: 42px; font-weight: 800; margin: 0; letter-spacing: 2px; direction: ltr; color: #111; }
 
 /* الشبكة الجديدة للصلوات - للديسكتوب */
 .prayers-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 24px; }
