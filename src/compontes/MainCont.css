@@ -1,40 +1,53 @@
-.countdown-container {
+.main-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header الجديد */
+.header-new {
   text-align: center;
-  margin: 35px 0 10px 0;
-  padding: 20px;
-  background: rgba(0,0,0,0.05);
-  border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.1);
+  padding: 30px 0 20px 0;
 }
-
-.countdown-label {
-  font-size: 22px;
-  color: #555;
-  margin: 0 0 10px 0;
-  font-weight: 500;
-}
-
-.countdown-time {
-  font-size: 55px;
-  font-weight: 800;
-  color: #000;
+.header-title {
   margin: 0;
+  font-size: 18px;
+  color: #888;
   letter-spacing: 3px;
-  direction: ltr;
-  font-family: 'Courier New', monospace;
 }
+.header-city {
+  margin: 8px 0 0 0;
+  font-size: 42px;
+  font-weight: 800;
+  color: #111;
+}
+.header-dates {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  color: #444;
+}
+.date-gregorian { font-weight: 600; direction: ltr; }
+.date-separator { color: #ccc; }
+.date-hijri { color: #0b7a45; font-weight: 700; }
 
-/* تمييز كرت الصلاة القادمة */
-.active-prayer {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-.active-prayer .prayer-card {
-  border: 3px solid #000 !important;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3) !important;
-}
+.divider { border-color: rgba(0,0,0,0.1)!important; margin-top: 10px!important; }
+.loading-box { margin-top: 50px!important; }
+.loading-spinner { color: black!important; }
+.error-text { color: red; }
+.prayers-stack { width: 100%!important; margin-top: 30px!important; overflow: hidden; }
+.city-select-wrapper { margin-top: 40px!important; justify-content: center; }
+.city-select-control { background: #f5f5f0; width: 200px; }
+
+.countdown-container { text-align: center; margin: 30px 0; padding: 18px; background: #f2f3f5; border-radius: 18px; }
+.countdown-label { font-size: 18px; color: #666; margin: 0 0 6px 0; }
+.countdown-time { font-size: 48px; font-weight: 800; margin: 0; letter-spacing: 3px; direction: ltr; }
+
+.active-prayer { transform: scale(1.05); }
+.active-prayer.prayer-card { border: 3px solid #000!important; }
 
 @media (max-width: 768px) {
-  .countdown-time { font-size: 38px; }
-  .countdown-label { font-size: 18px; }
+ .header-city { font-size: 28px; }
+ .header-dates { font-size: 16px; flex-direction: column; gap: 4px; }
+ .date-separator { display: none; }
+ .countdown-time { font-size: 36px; }
 }
