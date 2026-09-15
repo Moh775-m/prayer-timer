@@ -1,0 +1,42 @@
+/* Prayer.css */
+
+.prayer-card {
+  background-color: bisque !important;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  border-radius: 12px !important; /* كان 3 = 12px */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.prayer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2) !important;
+}
+
+.prayer-card-media {
+  height: 140px;
+  object-fit: cover;
+}
+
+.prayer-card-content {
+  padding: 16px !important; /* كان 8 = 16px */
+}
+
+.prayer-name {
+  font-weight: bold !important;
+  margin-bottom: 16px !important; /* كان marginBottom: 2 = 16px */
+}
+
+.prayer-time {
+  direction: ltr; /* عشان الوقت يظهر صح */
+  font-weight: 700 !important;
+}
+
+/* تحسين للموبايل */
+@media (max-width: 600px) {
+  .prayer-card {
+    min-width: 100%;
+  }
+}
