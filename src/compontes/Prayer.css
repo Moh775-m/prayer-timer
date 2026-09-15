@@ -1,42 +1,21 @@
-/* Prayer.css */
-
 .prayer-card {
-  background-color: bisque !important;
-  flex: 1;
-  min-width: 0;
-  text-align: center;
-  border-radius: 12px !important; /* كان 3 = 12px */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.12) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  background-color: #fff9f2!important;
+  border-radius: 18px!important;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08)!important;
+  transition: 0.3s!important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+.prayer-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.15)!important; }
+.prayer-card-media { height: 110px; object-fit: cover; }
+.prayer-card-content { text-align: center; padding: 10px!important; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.prayer-name { font-weight: 700!important; font-size: 18px!important; color: #222!important; }
+.prayer-time { font-weight: 800!important; font-size: 22px!important; color: #111!important; direction: ltr; margin-top: 4px!important; }
 
-.prayer-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2) !important;
-}
-
-.prayer-card-media {
-  height: 140px;
-  object-fit: cover;
-}
-
-.prayer-card-content {
-  padding: 16px !important; /* كان 8 = 16px */
-}
-
-.prayer-name {
-  font-weight: bold !important;
-  margin-bottom: 16px !important; /* كان marginBottom: 2 = 16px */
-}
-
-.prayer-time {
-  direction: ltr; /* عشان الوقت يظهر صح */
-  font-weight: 700 !important;
-}
-
-/* تحسين للموبايل */
 @media (max-width: 600px) {
-  .prayer-card {
-    min-width: 100%;
-  }
+ .prayer-card-media { height: 85px; }
+ .prayer-name { font-size: 15px!important; }
+ .prayer-time { font-size: 18px!important; }
 }
