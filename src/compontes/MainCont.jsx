@@ -11,8 +11,9 @@ import './MainCont.css';
 import MuClock from './MuClock';
 
 const CITIES = [
-  { label: 'عدن', value: 'Aden' },
   { label: 'المكلا', value: 'Mukalla' },
+  { label: 'سيئون', value: 'Seiyun' },
+  { label: 'عدن', value: 'Aden' },
   { label: 'صنعاء', value: 'Sanaa' },
 ];
 
@@ -74,6 +75,8 @@ export default function MainCont() {
   
 
   return (
+    <>
+    <div classname="fixed-bg"></div>
     <div className="main-container">
       <div className="header-new">
         <MuClock></MuClock>
@@ -115,5 +118,6 @@ export default function MainCont() {
         </FormControl>
       </div>
     </div>
+    </>
   );
 }

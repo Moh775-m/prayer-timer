@@ -10,15 +10,9 @@ import { red } from '@mui/material/colors'
 
 function App() {
   return (
+ 
     <div
-      style={{
-        minHeight: "100vh",
-        width: "100%",
-        backgroundImage: 'url("/images/m.jpeg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      
     >
       <Container maxWidth="xl">
         <MainCont />
