@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import './MukallaClock.css';
+import './MuClock.css';
 
-export default function MukallaClock() {
+export default function MuClock() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
