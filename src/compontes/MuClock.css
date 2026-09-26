@@ -1,30 +1,46 @@
 .mukalla-clock-wrapper {
   position: absolute;
-  top: 110px; 
-  right: 20px;
-  z-index: 20;
+  top: 0.5px; 
+  right: 861px;
+  z-index: 50;
 }
 
 .analog-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1.2px solid #d4af37;
-  border-radius: 14px;
-  padding: 6px 8px;
-  text-align: center;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-  width: 90px; 
+  background: transparent ;
+  border: none ;
+  box-shadow: none ;
+}
+
+.hour-number {
+  position: absolute;
+  top: 8px; /* المسافة من الحافة - كل ما كبر الرقم قرب للنص */
+  left: 50%;
+  transform-origin: center;
+  margin-left: -5px; /* عشان يتوسط */
+  font-size: 9px;
+  font-weight: 800;
+  color: #1a1a2e;
+  font-family: sans-serif;
+}
+  
+.digital-time {
+  background: rgba(255,255,255,0.8);
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin-top: 8px;
+  font-size: 11px;
 }
 
 .analog-header {
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 700;
-  color: #6b5b3a;
+  color: #0a0a0a;
   margin-bottom: 5px;
 }
 
 .analog-clock {
-  width: 58px;
-  height: 58px;
+  width: 100px;
+  height: 100px;
   border: 2px solid #1a1a2e;
   border-radius: 50%;
   margin: 0 auto;
@@ -42,9 +58,9 @@
   transform-origin: 50% 100%;
   border-radius: 10px;
 }
-.hour-hand { width: 2.5px; height: 15px; background: #1a1a2e; margin-left: -1.2px; }
-.minute-hand { width: 1.5px; height: 22px; background: #333; margin-left: -0.7px; }
-.second-hand { width: 1px; height: 24px; background: #c0392b; margin-left: -0.5px; }
+.hour-hand { width: 2.5px; height: 20px; background: #1a1a2e; margin-left: -1.2px; }
+.minute-hand { width: 1.5px; height: 26px; background: #333; margin-left: -0.7px; }
+.second-hand { width: 1px; height: 35px; background: #c0392b; margin-left: -0.5px; }
 
 .center-dot {
   position: absolute;
@@ -60,8 +76,8 @@
   margin-top: 5px;
   font-family: monospace;
   font-weight: 800;
-  font-size: 9px;
-  color: #1a1a2e;
+  font-size:14px;
+  color: #080808;
   direction: ltr;
 }
 
