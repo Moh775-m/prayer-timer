@@ -3,22 +3,25 @@ html{
   background-color: rgb(102, 160, 160);
 }
 body {
-  background-image: url('./assets/MO.jpeg'); /* حط صورتك هنا */
-  background-size: cover; /* تغطي الصفحة كاملة */
-  background-position: center;
-  background-attachment: fixed; /* تثبت مع النزول */
-  background-repeat: no-repeat;
+  position: relative;
+  margin: 0;
   min-height: 100vh;
 }
 
-/* عشان الكروت تبرز فوق الخلفية */
+/* هذه هي الخلفية الثابتة الحقيقية */
 body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.35); /* تعتيم خفيف */
-  z-index: -1;
+  content: "";
+  position: fixed; /* أهم سطر - يثبتها */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/MO.jpeg'); /* حط رابط صورتك هنا */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* ترجع ورا كل المحتوى */
+  will-change: transform; /* عشان تكون سلسة في الجوال */
 }
 
 

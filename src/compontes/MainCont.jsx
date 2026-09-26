@@ -109,7 +109,7 @@ export default function MainCont() {
       <div className="city-select-wrapper">
         <FormControl className="city-select-control">
           <InputLabel id="city-select-label">المدينة</InputLabel>
-          <Select labelId="city-select-label" value={city} label="المدينة" onChange={(e)=>setCity(e.target.value)} MenuProps={{ PaperProps: { sx: { textAlign: 'left', direction: 'rtl' } } }}>
+          <Select labelId="city-select-label" value={city} label="المدينة" onChange={(e)=>setCity(e.target.value)} MenuProps={{ PaperProps: { sx: { textAlign: 'right', direction: 'rtl' } } }}>
             {CITIES.map(c=><MenuItem key={c.value} value={c.value} sx={{ justifyContent: 'flex-end' }}>{c.label}</MenuItem>)}
           </Select>
         </FormControl>
