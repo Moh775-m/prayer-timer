@@ -8,6 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import CircularProgress from '@mui/material/CircularProgress';
 import './MainCont.css';
+import MuClock from './MuClock';
 
 const CITIES = [
   { label: 'عدن', value: 'Aden' },
@@ -69,6 +70,8 @@ export default function MainCont() {
   const cityLabel = CITIES.find(c=>c.value===city)?.label || city;
   const hijriDate = dateInfo?.hijri?.date || '';
   const gregorianDate = dateInfo?.gregorian?.date || '...';
+
+  <MuClock></MuClock>
 
   return (
     <div className="main-container">
