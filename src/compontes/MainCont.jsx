@@ -71,11 +71,12 @@ export default function MainCont() {
   const hijriDate = dateInfo?.hijri?.date || '';
   const gregorianDate = dateInfo?.gregorian?.date || '...';
 
-  <MuClock></MuClock>
+  
 
   return (
     <div className="main-container">
       <div className="header-new">
+        <MuClock></MuClock>
         <p className="header-title">مواقيت الصلاة</p>
         <h1 className="header-city">{cityLabel} - اليمن</h1>
         <div className="header-dates">
