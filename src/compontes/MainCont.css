@@ -4,9 +4,9 @@
 .header-title { margin: 0; font-size: 16px; color: #1b1a1a; letter-spacing: 2px; }
 .header-city { margin: 6px 0 0 0; font-size: 36px; font-weight: 800; color: #111; }
 .header-dates { margin-top: 10px; display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 18px; color: #444; flex-wrap: wrap; }
-.date-gregorian { font-weight: 600; direction: ltr; }
+.date-gregorian { color: #101110; font-weight: 600; direction: ltr; }
 .date-separator { color: #ccc; }
-.date-hijri { color: #0b7a45; font-weight: 700; }
+.date-hijri { color: #101110; font-weight: 700; }
 
 .divider { border-color: rgba(0,0,0,0.1); }
 .loading-box { margin-top: 50px; }

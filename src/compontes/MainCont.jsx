@@ -46,7 +46,7 @@ export default function MainCont() {
 
   useEffect(() => {
     if (!timings) return;
-    const order = [{k:'Fajr',n:'الفجر'},{k:'Dhuhr',n:'الظهر'},{k:'Asr',n:'العصر'},{k:'Maghrib',n:'المغرب'},{k:'Isha',n:'العشاء'}];
+    const order = [{k:'Fajr',n:'الفجر'},{k:'Sunrise',n:'الشروق'},{k:'Dhuhr',n:'الظهر'},{k:'Asr',n:'العصر'},{k:'Maghrib',n:'المغرب'},{k:'Isha',n:'العشاء'}];
     const calc = () => {
       const now = new Date();
       for (let i=0; i<order.length; i++) {
@@ -72,8 +72,6 @@ export default function MainCont() {
   const hijriDate = dateInfo?.hijri?.date || '';
   const gregorianDate = dateInfo?.gregorian?.date || '...';
 
-  
-
   return (
     <>
     <div classname="fixed-bg"></div>
@@ -83,7 +81,7 @@ export default function MainCont() {
         <p className="header-title">مواقيت الصلاة</p>
         <h1 className="header-city">{cityLabel} - اليمن</h1>
         <div className="header-dates">
-          <span className="date-gregorian">{gregorianDate}</span>
+          <span className="date-gregorian"> {gregorianDate}</span>
           <span className="date-separator">|</span>
           <span className="date-hijri">{hijriDate} هـ</span>
         </div>
@@ -102,10 +100,11 @@ export default function MainCont() {
        error? <Stack alignItems="center" className="loading-box"><h3 className="error-text">{error}</h3></Stack> :
         <div className="prayers-grid">
           <div className={nextPrayerIndex===0?'active-prayer':''}><Prayer name="الفجر" time={timings?.Fajr} image="https://blog.ajsrp.com/wp-content/uploads/2025/05/%D9%81%D8%B6%D8%A7%D8%A6%D9%84-%D8%B5%D9%84%D8%A7%D8%A9-%D8%A7%D9%84%D9%81%D8%AC%D8%B1-1024x585.jpeg" /></div>
-          <div className={nextPrayerIndex===1?'active-prayer':''}><Prayer name="الظهر" time={timings?.Dhuhr} image="https://tse2.mm.bing.net/th/id/OIP.f9mdujSaLryM_YC5lfnvjQHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
-          <div className={nextPrayerIndex===2?'active-prayer':''}><Prayer name="العصر" time={timings?.Asr} image="https://tse3.mm.bing.net/th/id/OIP.-4X3YYLLxZ9ijgPDu2kbFAHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
-          <div className={nextPrayerIndex===3?'active-prayer':''}><Prayer name="المغرب" time={timings?.Maghrib} image="https://tse3.mm.bing.net/th/id/OIP.Djf8zKA8cXusfYS80Fc65wHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
-          <div className={nextPrayerIndex===4?'active-prayer':''}><Prayer name="العشاء" time={timings?.Isha} image="https://tse4.mm.bing.net/th/id/OIP.n3jVzC9iMTkjtcKpaAVgFwHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
+          <div className={nextPrayerIndex===1?'active-prayer':''}><Prayer name="الشروق" time={timings?.Sunrise} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRprH1oPCLexOVbdSlGEF0Ee2mfENLVVTNmZnjiaJt2TQ&s=10" /></div>
+          <div className={nextPrayerIndex===2?'active-prayer':''}><Prayer name="الظهر" time={timings?.Dhuhr} image="https://tse2.mm.bing.net/th/id/OIP.f9mdujSaLryM_YC5lfnvjQHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
+          <div className={nextPrayerIndex===3?'active-prayer':''}><Prayer name="العصر" time={timings?.Asr} image="https://tse3.mm.bing.net/th/id/OIP.-4X3YYLLxZ9ijgPDu2kbFAHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
+          <div className={nextPrayerIndex===4?'active-prayer':''}><Prayer name="المغرب" time={timings?.Maghrib} image="https://tse3.mm.bing.net/th/id/OIP.Djf8zKA8cXusfYS80Fc65wHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
+          <div className={nextPrayerIndex===5?'active-prayer':''}><Prayer name="العشاء" time={timings?.Isha} image="https://tse4.mm.bing.net/th/id/OIP.n3jVzC9iMTkjtcKpaAVgFwHaEO?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" /></div>
         </div>
       }
 

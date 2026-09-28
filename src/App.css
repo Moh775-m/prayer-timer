@@ -2,21 +2,45 @@ html{
   direction: rtl;  /*عكس المكونات ممن اليمين الى اليسار */
   background-color: rgb(102, 160, 160);
 }
-body {
-  background-image: url('./assets/MO.jpeg'); 
-  background-size: cover; /* تغطي الصفحة كاملة */
-  background-position: center;
-  background-attachment: fixed; /* تثبت مع النزول */
-  background-repeat: no-repeat;
-  min-height: 100vh;
+
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
 }
 
-/* عشان الكروت تبرز فوق الخلفية */
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* الخلفية الثابتة */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.35); /* تعتيم خفيف */
-  z-index: -1;
+  inset: 0;
+
+  background-image: url("./assets/MO.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+/* تعتيم الخلفية */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+}
+
+/* محتوى الموقع فوق الخلفية */
+#root {
+  position: relative;
+  z-index: 2;
 }
