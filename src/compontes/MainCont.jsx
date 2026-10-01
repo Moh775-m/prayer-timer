@@ -81,7 +81,7 @@ export default function MainCont() {
         <p className="header-title">مواقيت الصلاة</p>
         <h1 className="header-city">{cityLabel} - اليمن</h1>
         <div className="header-dates">
-          <span className="date-gregorian"> {gregorianDate}</span>
+          <span className="date-gregorian"> {gregorianDate} مـ</span>
           <span className="date-separator">|</span>
           <span className="date-hijri">{hijriDate} هـ</span>
         </div>

@@ -1,16 +1,264 @@
-# React + Vite
+🕌 Prayer Times
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+تطبيق ويب لعرض مواقيت الصلاة اليومية حسب المدينة، تم تطويره باستخدام React.js وMaterial UI، مع الاعتماد على AlAdhan Prayer Times API للحصول على أوقات الصلاة.
 
-Currently, two official plugins are available:
+🌐 Live Demo:
+https://moh775-m.github.io/prayer-timer/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+📦 GitHub Repository:
+https://github.com/Moh775-m/prayer-timer
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📌 نبذة عن المشروع
 
-## Expanding the ESLint configuration
+Prayer Times هو تطبيق ويب بسيط وسهل الاستخدام يتيح للمستخدم معرفة مواقيت الصلوات اليومية حسب المدينة المختارة.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+يعرض التطبيق أوقات:
+
+- 🌅 الفجر
+- ☀️ الظهر
+- 🌤️ العصر
+- 🌇 المغرب
+- 🌙 العشاء
+
+كما يعرض التاريخ الهجري المرتبط باليوم الحالي.
+
+---
+
+✨ المميزات
+
+- 🕌 عرض مواقيت الصلوات اليومية.
+- 📍 اختيار المدينة.
+- 🇾🇪 دعم المدن اليمنية.
+- 📅 عرض التاريخ الهجري.
+- 🌙 عرض الصلوات الخمس.
+- 🔄 تحديث المواقيت حسب المدينة والتاريخ الحالي.
+- ⏳ عرض حالة التحميل أثناء جلب البيانات.
+- 📱 تصميم متجاوب مع مختلف أحجام الشاشات.
+- 🎨 واجهة مستخدم باستخدام Material UI.
+- 🌐 جلب البيانات مباشرة من API.
+- 🚀 إمكانية نشر المشروع على GitHub Pages.
+
+---
+
+🏙️ المدن المدعومة
+
+حاليًا يدعم التطبيق:
+
+المدينة| City
+عدن| Aden
+المكلا| Mukalla
+
+يمكن إضافة مدن أخرى بسهولة من خلال تعديل قائمة المدن في المشروع.
+
+---
+
+🧰 التقنيات المستخدمة
+
+التقنية| الاستخدام
+React.js| بناء واجهة المستخدم
+JavaScript| منطق التطبيق
+Vite| تشغيل وبناء المشروع
+Material UI| تصميم مكونات الواجهة
+AlAdhan API| الحصول على مواقيت الصلاة
+Git| إدارة الإصدارات
+GitHub| استضافة المشروع
+GitHub Pages| نشر التطبيق
+
+---
+
+🔌 API
+
+يعتمد المشروع على:
+
+AlAdhan Prayer Times API
+
+ويستخدم endpoint الخاص بالحصول على مواقيت الصلاة حسب المدينة والتاريخ:
+
+https://api.aladhan.com/v1/timingsByCity/
+
+ويتم إرسال المدينة والدولة وطريقة الحساب مع الطلب.
+
+مثال:
+
+https://api.aladhan.com/v1/timingsByCity/DATE?city=Aden&country=YE&method=3
+
+وفق توثيق AlAdhan، فإن "method=3" يشير إلى Muslim World League. كما يعيد الـ API بيانات مواقيت الصلاة والتاريخ، بما في ذلك التاريخ الهجري.
+
+«ملاحظة: قد تختلف بعض أوقات الصلاة عن الأوقات المعتمدة في بعض المساجد أو الجهات المحلية بسبب اختلاف طرق الحساب أو إعدادات ضبط المواقيت.»
+
+---
+
+📁 هيكل المشروع
+
+prayer-timer/
+│
+├── public/
+│   └── img/
+│
+├── src/
+│   ├── components/
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── ...
+│
+├── .github/
+│   └── workflows/
+│       └── main.yml
+│
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+
+«قد يختلف الهيكل قليلًا حسب آخر تحديثات المشروع.»
+
+---
+
+🚀 تشغيل المشروع محليًا
+
+1. استنساخ المشروع
+
+git clone https://github.com/Moh775-m/prayer-timer.git
+
+2. الدخول إلى مجلد المشروع
+
+cd prayer-timer
+
+3. تثبيت الحزم
+
+npm install
+
+4. تشغيل المشروع
+
+npm run dev
+
+بعدها افتح الرابط الذي يظهر في Terminal، وغالبًا يكون:
+
+http://localhost:5173
+
+---
+
+🏗️ بناء المشروع
+
+لبناء نسخة الإنتاج:
+
+npm run build
+
+سيقوم Vite بإنشاء مجلد:
+
+dist/
+
+وهو مجلد ملفات الإنتاج الذي يمكن نشره على خدمات الاستضافة.
+
+لمعاينة نسخة الإنتاج محليًا:
+
+npm run preview
+
+---
+
+🌐 النشر على GitHub Pages
+
+تم إعداد المشروع ليعمل على GitHub Pages.
+
+بما أن المستودع اسمه:
+
+prayer-timer
+
+يجب أن يكون إعداد "base" في Vite:
+
+base: '/prayer-timer/',
+
+عند نشر مشروع Vite على رابط بالشكل:
+
+https://USERNAME.github.io/REPOSITORY/
+
+يجب أن يتوافق "base" مع اسم المستودع.
+
+عملية النشر تكون بالشكل التالي:
+
+Git Push
+    ↓
+GitHub
+    ↓
+GitHub Actions
+    ↓
+npm install
+    ↓
+npm run build
+    ↓
+dist/
+    ↓
+GitHub Pages
+    ↓
+Live Website
+
+---
+
+🎨 واجهة المستخدم
+
+تم تصميم الواجهة باستخدام Material UI مع التركيز على:
+
+- وضوح مواقيت الصلاة.
+- سهولة اختيار المدينة.
+- دعم اللغة العربية.
+- التصميم المتجاوب.
+- عرض المعلومات بطريقة بسيطة.
+
+---
+
+📱 Responsive Design
+
+التطبيق مصمم ليعمل على:
+
+- 📱 الهواتف.
+- 📲 الأجهزة اللوحية.
+- 💻 أجهزة الكمبيوتر.
+
+---
+
+🔮 تطويرات مستقبلية
+
+يمكن تطوير المشروع مستقبلًا بإضافة:
+
+- 📍 تحديد المدينة تلقائيًا باستخدام الموقع الجغرافي.
+- ⏰ عداد للوقت المتبقي للصلاة القادمة.
+- 🔔 إشعارات أوقات الصلاة.
+- 🕌 أوقات الشروق.
+- 📆 عرض مواقيت الصلاة لشهر كامل.
+- 🌍 إضافة مدن ودول أخرى.
+- 🌙 دعم الوضع الليلي.
+- ⚙️ إمكانية تغيير طريقة حساب مواقيت الصلاة.
+- 🔊 إضافة الأذان.
+
+---
+
+👨‍💻 المطور
+
+Mohsen Al-Mashjari
+
+طالب تقنية معلومات ومهتم بتطوير تطبيقات الويب باستخدام React.js وتقنيات Frontend الحديثة.
+
+🔗 روابط
+
+GitHub:
+https://github.com/Moh775-m
+
+Portfolio:
+https://moh775-m.github.io/profile/
+
+Project:
+https://github.com/Moh775-m/prayer-timer
+
+Live Demo:
+https://moh775-m.github.io/prayer-timer/
+
+---
+
+📄 License
+
+هذا المشروع تم تطويره لأغراض تعليمية وتطويرية.
+
+© 2026 Mohsen Al-Mashjari
